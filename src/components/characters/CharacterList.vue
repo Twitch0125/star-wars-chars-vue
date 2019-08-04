@@ -13,6 +13,7 @@
               >{{showDetails ? "Hide Details": "Show Details"}}</v-btn>
             </v-toolbar>
           </v-flex>
+          <Character v-if="characterSelected" :character="selectedCharacter" />
           <v-flex v-for="character in characters" :key="character.id">
             <v-hover v-slot:default="{ hover }">
               <v-card @click="selectCharacter(character.id)" :elevation="hover ? 12: 0">
@@ -47,9 +48,7 @@
                 </v-expand-transition>
               </v-card>
             </v-hover>
-            <v-expand-transition>
-              <Character v-if="characterSelected" :character="selectedCharacter" />
-            </v-expand-transition>
+            <v-expand-transition></v-expand-transition>
           </v-flex>
         </v-layout>
       </v-container>
