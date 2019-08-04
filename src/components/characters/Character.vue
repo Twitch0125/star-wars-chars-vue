@@ -2,7 +2,9 @@
   <v-card>
     <v-container fluid>
       <v-layout wrap>
-        <v-flex></v-flex>
+        <v-flex>
+          <v-card-title>{{character.name}}</v-card-title>
+        </v-flex>
       </v-layout>
     </v-container>
   </v-card>
@@ -11,7 +13,8 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
-  props: {}
+  data: () => ({}),
+  props: ["character"]
 });
 </script>
 
