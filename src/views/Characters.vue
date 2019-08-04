@@ -1,14 +1,15 @@
 <template>
-  <Welcome />
+  <CharacterList />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Welcome from "../components/Welcome.vue";
+import CharacterList from "@/components/characters/CharacterList.vue";
 
 export default Vue.extend({
   components: {
-    Welcome
+    CharacterList
   }
 });
 </script>
+
